@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GrubberTask</string>
+    <string name="no_connection_available">Please check internet</string>
+    <string name="validation_empty_email">Please enter Email</string>
+    <string name="validation_empty_password">Please enter Password</string>
+    <string name="validation_valid_email">Please enter valid email</string>
+    <string name="order">Review Order</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+</resources>

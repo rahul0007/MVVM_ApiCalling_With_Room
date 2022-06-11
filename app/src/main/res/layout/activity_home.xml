@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@null"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/item_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCategories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_category" />
+        </androidx.cardview.widget.CardView>
+
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:layout_width="0dp"
+           android:layout_weight="8"
+           android:orientation="vertical"
+           android:layout_height="match_parent">
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="match_parent"
+               android:text="title"
+               android:textColor="@color/white"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:background="@color/lightOrange"
+               android:layout_height="?android:attr/actionBarSize">
+
+           </androidx.appcompat.widget.AppCompatTextView>
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recyclerViewItems"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="5dp"
+               android:orientation="vertical"
+               app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+               app:spanCount="2" />
+       </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:padding="@dimen/dp5"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonCheckOut"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="checkout"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/ButtonCancelOrder"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="cancel"
+                android:background="@null"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                 />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
